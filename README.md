@@ -2,7 +2,6 @@
  Teaching material and exercises
 
 ## ⚙️ Setup Instructions
-1. **Clone the repository**:
 
 ```bash
 # 1. Clone the repository
