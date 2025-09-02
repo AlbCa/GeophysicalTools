@@ -19,17 +19,17 @@ def plotDCscheme():
     """
 
     # --- setup figure con due colonne ---
-    fig = plt.figure(figsize=(7,3))
-    gs = gridspec.GridSpec(2, 2, width_ratios=[1.3, 1.])
+    fig = plt.figure(figsize=(8,3))
+    gs = gridspec.GridSpec(2, 2, width_ratios=[1.3, 1.], wspace=0.22)
 
     # --- schema a sinistra con distribuzione di campo ---
     ax0 = plt.subplot(gs[:,0])
 
     # coordinate elettrodi
     A = np.array([2, 1])   # corrente +
-    B = np.array([4, 1])   # corrente -
+    B = np.array([3, 1])   # corrente -
     M = np.array([6, 1])   # potenziale
-    N = np.array([8, 1])   # potenziale
+    N = np.array([7, 1])   # potenziale
     charges = [(1, A), (-1, B)]
 
     # griglia sottosuolo (solo sotto y=1)
@@ -57,21 +57,21 @@ def plotDCscheme():
 
     # disegno superficie
     ax0.plot([0,10],[1,1], 'k', lw=2)
-    ax0.streamplot(X, Z, Ex, Ez, color='b', density=1.2, linewidth=0.5, arrowsize=1)
+    ax0.streamplot(X, Z, Ex, Ez, color='slategray', density=1.2, linewidth=0.7, arrowsize=1)
 
     # elettrodi corrente (blu)
-    ax0.plot(A[0], A[1], marker='v', markersize=10,
+    ax0.plot(A[0], A[1], marker='v', markersize=8,
              markerfacecolor='blue', markeredgecolor='k')
-    ax0.plot(B[0], B[1], marker='v', markersize=10,
+    ax0.plot(B[0], B[1], marker='v', markersize=8,
              markerfacecolor='blue', markeredgecolor='k')
-    ax0.annotate("Current\ndipole", (3,1.5), color="blue", ha="center")
+    ax0.annotate("Current\ndipole", (2.5,1.5), color="blue", ha="center")
 
     # elettrodi potenziale (rossi)
     ax0.plot(M[0], M[1], marker='v', markersize=8,
              markerfacecolor='red', markeredgecolor='k')
     ax0.plot(N[0], N[1], marker='v', markersize=8,
              markerfacecolor='red', markeredgecolor='k')
-    ax0.annotate("Potential\ndipole", (7,1.5), color="tab:red", ha="center")
+    ax0.annotate("Potential\ndipole", (6.5,1.5), color="tab:red", ha="center")
 
     ax0.set_xlim(0,10)
     ax0.set_ylim(-7,3)
@@ -93,7 +93,7 @@ def plotDCscheme():
 
     ax1 = plt.subplot(gs[0,1])
     ax1.step(t, signal_I, where="mid", color="blue")
-    ax1.set_ylabel("I (A)", color="blue")
+    ax1.set_ylabel("I (mA)", color="blue")
     ax1.set_ylim(-1.3, 1.3)
     ax1.set_xticks([])
     ax1.set_yticks([])
@@ -102,14 +102,14 @@ def plotDCscheme():
 
     ax2 = plt.subplot(gs[1,1])
     ax2.step(t, signal_V, where="mid", color="tab:red")
-    ax2.set_ylabel("u (V)", color="tab:red")
+    ax2.set_ylabel("u (mV)", color="tab:red")
     ax2.set_ylim(-1.3, 1.3)
     ax2.set_xticks([])
     ax2.set_yticks([])
     ax2.spines["top"].set_visible(False)
     ax2.spines["right"].set_visible(False)
-
-    plt.tight_layout()
+    #plt.tight_layout()
+    plt.savefig('../figures/DCscheme.png', dpi=150)
     plt.show()
     
 
