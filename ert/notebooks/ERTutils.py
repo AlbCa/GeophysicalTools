@@ -317,11 +317,11 @@ r2_pow = r2_score(bin_Rerr_mean, bin_fit_pow)
 r2_lin = r2_score(bin_Rerr_mean, bin_fit_lin)
 
 # --- Print fit results ----------------------------------------------------
-print("Power-law fit: R_err = c * R_avg^p")
-print(f"  c = {popt_pow[0]:.6g}, p = {popt_pow[1]:.6g}, R^2 = {r2_pow:.3f}")
-print()
-print("Linear fit: R_err = a + b * R_avg")
-print(f"  a = {popt_lin[0]:.6g}, b = {popt_lin[1]:.6g}, R^2 = {r2_lin:.3f}")
+#print("Power-law fit: R_err = c * R_avg^p")
+#print(f"  c = {popt_pow[0]:.6g}, p = {popt_pow[1]:.6g}, R^2 = {r2_pow:.3f}")
+#print()
+#print("Linear fit: R_err = a + b * R_avg")
+#print(f"  a = {popt_lin[0]:.6g}, b = {popt_lin[1]:.6g}, R^2 = {r2_lin:.3f}")
 
 # Also compute implied relative error for a representative range
 R_plot = np.logspace(np.log10(sorted_R_avg.min()*0.8), np.log10(sorted_R_avg.max()*1.2), 300)
@@ -329,34 +329,34 @@ Rerr_pow_plot = power_law(R_plot, *popt_pow)
 Rerr_lin_plot = linear_model(R_plot, *popt_lin)
 
 # --- Plotting --------------------------------------------------------------
-fig, ax = plt.subplots(1, 2, figsize=(11, 4))
+#fig, ax = plt.subplots(1, 2, figsize=(11, 4))
 
 # Left: absolute error (log-log)
-ax[0].scatter(R_avg, R_error, s=8, alpha=0.15)
-ax[0].scatter(bin_Ravg_mean, bin_Rerr_mean, s=50, c='C1', edgecolor='k', label='binned means (20 bins)')
-ax[0].loglog(R_plot, Rerr_pow_plot, linestyle='--', color='r', linewidth=2, label=f'power-law fit (c={popt_pow[0]:.3g}, p={popt_pow[1]:.3g}, R²={r2_pow:.3f})')
-ax[0].loglog(R_plot, Rerr_lin_plot, linestyle=':', linewidth=2, label=f'linear fit (a={popt_lin[0]:.3g}, b={popt_lin[1]:.3g}, R²={r2_lin:.3f})')
-ax[0].set_xlabel('R_avg [Ω]')
-ax[0].set_ylabel('R_error [Ω]')
-ax[0].set_title('Absolute error')
-ax[0].legend()
-ax[0].grid(True, which='both', ls=':', alpha=0.5)
+#ax[0].scatter(R_avg, R_error, s=8, alpha=0.15)
+#ax[0].scatter(bin_Ravg_mean, bin_Rerr_mean, s=50, c='C1', edgecolor='k', label='binned means (20 bins)')
+#ax[0].loglog(R_plot, Rerr_pow_plot, linestyle='--', color='r', linewidth=2, label=f'power-law fit (c={popt_pow[0]:.3g}, p={popt_pow[1]:.3g}, R²={r2_pow:.3f})')
+#ax[0].loglog(R_plot, Rerr_lin_plot, linestyle=':', linewidth=2, label=f'linear fit (a={popt_lin[0]:.3g}, b={popt_lin[1]:.3g}, R²={r2_lin:.3f})')
+#ax[0].set_xlabel('R_avg [Ω]')
+#ax[0].set_ylabel('R_error [Ω]')
+#ax[0].set_title('Absolute error')
+#ax[0].legend()
+#ax[0].grid(True, which='both', ls=':', alpha=0.5)
 
 # Right: relative error (%) (log-log)
-rel_pow = (Rerr_pow_plot / R_plot) * 100
-rel_lin = (Rerr_lin_plot / R_plot) * 100
-ax[1].loglog(R_plot, rel_pow, linestyle='--', color='r', linewidth=2, label='power-law implied relative error')
-ax[1].loglog(R_plot, rel_lin, linestyle=':', linewidth=2, label='linear implied relative error')
+#rel_pow = (Rerr_pow_plot / R_plot) * 100
+#rel_lin = (Rerr_lin_plot / R_plot) * 100
+#ax[1].loglog(R_plot, rel_pow, linestyle='--', color='r', linewidth=2, label='power-law implied relative error')
+#ax[1].loglog(R_plot, rel_lin, linestyle=':', linewidth=2, label='linear implied relative error')
 # plot binned relative errors (points)
-ax[1].scatter(bin_Ravg_mean, (bin_Rerr_mean / bin_Ravg_mean) * 100, s=50, c='C1', edgecolor='k', label='binned relative error (%)')
-ax[1].set_xlabel('R_avg [Ω]')
-ax[1].set_ylabel('Relative error [%]')
-ax[1].set_title('Implied relative error')
-ax[1].legend()
-ax[1].grid(True, which='both', ls=':', alpha=0.5)
+#ax[1].scatter(bin_Ravg_mean, (bin_Rerr_mean / bin_Ravg_mean) * 100, s=50, c='C1', edgecolor='k', label='binned relative error (%)')
+#ax[1].set_xlabel('R_avg [Ω]')
+#ax[1].set_ylabel('Relative error [%]')
+#ax[1].set_title('Implied relative error')
+#ax[1].legend()
+#ax[1].grid(True, which='both', ls=':', alpha=0.5)
 
-plt.tight_layout()
-plt.show()
+#plt.tight_layout()
+#plt.show()
 
 
 
