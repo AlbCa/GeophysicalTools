@@ -1,4 +1,4 @@
-# GeophysicalMethods
+# GeophysicalTools
  Teaching material and exercises
 
 ## ⚙️ Setup Instructions
