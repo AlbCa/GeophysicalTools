@@ -34,4 +34,5 @@ jupyter lab
 
 ---
 ## 📘 Basic Python & Jupyter Instructions
-For dummy users, a quick guide is available in `python&jupyter.pdf` 
+For dummy users, a quick guide is available here:  
+[📄 Python & Jupyter Guide](PythonJupyter.pdf)
