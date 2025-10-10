@@ -1,4 +1,4 @@
-name: pg
+name: seismic
 channels:
   - gimli
   - conda-forge
