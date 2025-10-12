@@ -1,10 +1,8 @@
 name: seismic
 channels:
-  - gimli
   - conda-forge
+  - gimli
   - defaults
-  - https://repo.anaconda.com/pkgs/main
-  - https://repo.anaconda.com/pkgs/r
 dependencies:
   - _libgcc_mutex=0.1
   - _openmp_mutex=4.5
@@ -35,6 +33,7 @@ dependencies:
   - binutils_linux-64=2.43
   - black=24.10.0
   - bleach=6.2.0
+  - bleach-with-css=6.2.0
   - blosc=1.21.5
   - boost=1.84.0
   - brotli=1.1.0
@@ -328,7 +327,7 @@ dependencies:
   - pulseaudio-client=17.0
   - pure_eval=0.2.3
   - pycodestyle=2.12.1
-  - pyconify=0.2
+  - pyconify=0.2.1
   - pycparser=2.22
   - pydocstyle=6.3.0
   - pyflakes=3.2.0
@@ -500,17 +499,29 @@ dependencies:
       - cmocean==4.0.3
       - colorcet==3.1.0
       - cramjam==2.9.1
+      - disba==0.7.0
+      - evodcinv==2.2.2
       - fastparquet==2024.11.0
       - fsspec==2025.3.0
+      - greenlet==3.2.4
+      - h5py==3.14.0
       - imageio==2.36.1
       - ipywidgets==8.1.5
+      - joblib==1.5.2
       - jupyter-server-proxy==4.4.0
       - jupyterlab-widgets==3.0.13
+      - llvmlite==0.45.1
+      - lxml==6.0.2
       - meshio==5.3.5
       - notebook==7.3.2
+      - numba==0.62.1
+      - obspy==1.4.2
       - pandas==2.2.3
+      - progress==1.6.1
       - pyarrow==19.0.1
       - simpervisor==1.0.0
+      - sqlalchemy==1.4.54
+      - stochopy==2.3.0
       - trame==3.7.6
       - trame-client==3.5.1
       - trame-server==3.2.6
@@ -518,4 +529,4 @@ dependencies:
       - trame-vuetify==2.8.0
       - tzdata==2024.2
       - widgetsnbextension==4.0.13
-prefix: /home/alberto/anaconda3/envs/pg
+prefix: /home/alberto/miniconda3/envs/seismic
