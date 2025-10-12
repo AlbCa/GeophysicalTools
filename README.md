@@ -15,22 +15,27 @@ cd GeophysicalTools
 The requirements are stored in the main folder (GeophysicalTools/) as `.yml` files, used to describe an environment — that is, all the packages, dependencies, Python version, and sometimes even the channels (repositories) used to install them. 
 Run the following commands to create the environments:
 ```bash
-conda env create -f electro.yml
+conda env create -f electro.yml		# for electro-magnetic methods
 ```
 ```bash
-conda env create -f seismic.yml
+conda env create -f seismic.yml		# for seismic methods
 ```
 ```bash
-conda env create -f gpr.yml
+conda env create -f gpr.yml			# for gpr
 ```
 
 ### 3. Activate the environment
 Before running a notebook, activate the corresponding environment:  
 ```bash
-conda activate electro    # for electro-magnetic methods
-conda activate seismic    # for seismic methods
-conda activate gpr        # for gpr
+conda activate electro
 ```
+```bash
+conda activate seismic
+```
+```bash
+conda activate gpr
+```
+
 ### 4. Launch Jupyter
 Once the desired environment is active, start Jupyter:
 ```bash
