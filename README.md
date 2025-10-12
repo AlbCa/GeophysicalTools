@@ -16,9 +16,14 @@ The requirements are stored in the main folder (GeophysicalTools/) as `.yml` fil
 Run the following commands to create the environments:
 ```bash
 conda env create -f electro.yml
+```
+```bash
 conda env create -f seismic.yml
+```
+```bash
 conda env create -f gpr.yml
 ```
+
 ### 3. Activate the environment
 Before running a notebook, activate the corresponding environment:  
 ```bash
