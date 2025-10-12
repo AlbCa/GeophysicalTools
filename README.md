@@ -12,7 +12,7 @@ git clone https://github.com/AlbCa/GeophysicalTools.git
 cd GeophysicalTools
 ```
 ### 2. Create the environments
-The requirements are stored in the main folder (GeophysicalTools/) as `.yml` files, used to describe an environment — that is, all the packages, dependencies, Python version, and sometimes even the channels (repositories) used to install them. 
+The requirements are stored in the main folder (GeophysicalTools/) as `.yml` files, used to describe an environment — that is, all the packages and dependencies used to install them. 
 Run the following commands to create the environments:
 ```bash
 conda env create -f electro.yml		# for electro-magnetic methods
