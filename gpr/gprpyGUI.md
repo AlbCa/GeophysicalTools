@@ -11,3 +11,7 @@ type `p` and press Enter if you want to work with profiles.
 p
 ```
 4. GUI opens automatically, use the menus and buttons to navigate through profiles, apply filters, and visualize results.
+
+---
+
+Nice YouTube recording with some of GPRPy's functionality [here](https://www.youtube.com/watch?v=WPGtQY248QU)
