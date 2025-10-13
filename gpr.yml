@@ -243,4 +243,8 @@ dependencies:
   - zstd=1.5.6
   - pip:
       - bruges==0.5.4
+      - gprpy==1.0.14
+      - pmw==2.1.1
+      - pyevtk==1.6.0
+      - tqdm==4.67.1
 prefix: /home/alberto/anaconda3/envs/gpr
