@@ -11,7 +11,7 @@ Open your terminal/Anaconda prompt and run this:
 git clone https://github.com/AlbCa/GeophysicalTools.git
 cd GeophysicalTools
 ```
-### 2. 🔧 Create the environments
+### 2. Create the environments
 The requirements are stored in the main folder (GeophysicalTools/) as `.yml` files, used to describe an environment — that is, all the packages and dependencies used to install them. 
 
 On *Windows* and *Linux*, you can simply run the following commands:
