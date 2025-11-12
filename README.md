@@ -61,7 +61,7 @@ pip install gprpy
 ```
 If any errors occur due to missing dependencies or libraries, you can always use `pip` which lets you download, install, upgrade, and remove packages:
 ```bash
-pip install packa_gename
+pip install package_name
 ```
 ### --- 
 
