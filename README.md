@@ -75,4 +75,5 @@ jupyter lab
 ---
 ## 📘 Basic Python & Jupyter Instructions
 For dummy users, a quick guide is available here:  
-[📄 Python & Jupyter Guide](PythonJupyter.pdf)
+[📄 Python & Jupyter Guide](PythonJupyter.pdf)  
+and a *"Getting started Notebook"* [here](00_Getting_started.ipynb)
