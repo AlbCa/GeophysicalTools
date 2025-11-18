@@ -53,13 +53,10 @@ conda install jupyterlab
 pip install scipy obspy disba evodcinv tqdm 
 ```
 #### 3. gpr
-```bash
-conda create -n gpr python=3.11
-conda activate gpr
-conda install jupyterlab
-pip install gprpy
-```
-If any errors occur due to missing dependencies or libraries, you can always use `pip` which lets you download, install, upgrade, and remove packages:
+Follow the [instructions](https://github.com/NSGeophysics/GPRPy) to install `GPRPy`.
+
+#### --- 
+Remember that missing dependencies or libraries can always be managed by `pip` which lets you download, install, upgrade, and remove packages:
 ```bash
 pip install package_name
 ```
