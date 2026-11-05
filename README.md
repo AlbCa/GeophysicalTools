@@ -56,7 +56,7 @@ pip install scipy obspy disba evodcinv tqdm
 ```
 #### 3. gpr
 ```bash
-conda create -n gpr python=3.10"
+conda create -n gpr python=3.10
 conda activate gpr
 conda install jupyter
 ```
