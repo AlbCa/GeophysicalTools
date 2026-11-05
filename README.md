@@ -58,7 +58,8 @@ pip install scipy obspy disba evodcinv tqdm
 ```bash
 conda create -n gpr python=3.10
 conda activate gpr
-conda install jupyter
+conda install jupyter numpy
+pip install kiwisolver
 ```
 and then follow the [instructions](https://github.com/NSGeophysics/GPRPy) to install `GPRPy`.
 
