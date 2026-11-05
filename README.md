@@ -9,19 +9,21 @@ To ensure reproducibility and modularity, three separate conda environments are 
 Open your terminal/Anaconda prompt and run this:
 ```bash
 git clone https://github.com/AlbCa/GeophysicalTools.git
+```
+```bash
 cd GeophysicalTools
 ```
 ### 2. Create the environments
 The requirements are stored in the main folder (GeophysicalTools/) as `.yml` files, used to describe an environment — that is, all the packages and dependencies used to install them.  
 You can simply run the following commands:
 ```bash
-conda env create -f electro.yml		# for electro-magnetic methods
+conda env create -f electro.yml
 ```
 ```bash
-conda env create -f seismic.yml		# for seismic methods
+conda env create -f seismic.yml
 ```
 ```bash
-conda env create -f gpr.yml			# for gpr
+conda env create -f gpr.yml
 ```
 ### 3. Activate the environment
 Before running a notebook, activate the corresponding environment:  
